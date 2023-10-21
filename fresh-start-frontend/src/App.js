@@ -16,44 +16,46 @@ function App() {
     setIsSubmitted(true);
   }
 
-  async function sendData(){
-    const apiURL = "http://localhost:5000/api/resolutions/";
+  async function sendData() {
+    const apiURL = "http://localhost:3500/api/resolutions/";
 
     const resolution = { content };
     const response = await fetch(apiURL, {
       method: "POST",
-      headers: {"Content-Type": "application/json"},
-      body: JSON.stringify(resolution)
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(resolution),
     });
 
     const data = await response.json();
 
-    if(response.ok){
-
+    if (response.ok) {
       setResolutions([...resolutions, data]);
       setContent("");
     }
   }
 
   useEffect(() => {
-
     const getResolutions = async () => {
-      const apiURL = "http://localhost:5000/api/resolutions/";
+      const apiURL = "http://localhost:3500/api/resolutions/";
 
       const response = await fetch(apiURL);
 
       const data = await response.json();
 
-      if(response.ok){
+      if (response.ok) {
         setResolutions(data);
       }
-    }
+    };
 
     getResolutions();
-  }, [])
+  }, []);
 
   return !isSubmitted ? (
-    <FirstPage onHandleSubmit={handleSubmit} newRes={content} setNewRes={setContent} />
+    <FirstPage
+      onHandleSubmit={handleSubmit}
+      newRes={content}
+      setNewRes={setContent}
+    />
   ) : (
     <SecondPage data={resolutions} />
   );
