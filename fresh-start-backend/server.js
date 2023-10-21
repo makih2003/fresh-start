@@ -27,9 +27,11 @@ const mongodb = process.env.MONGO_URI;
 
 main().catch((err) => console.log(err));
 async function main() {
-    if (port) {
-        app.listen(port, () => {
-            console.log(`connected to DB & listening on port ${port}`);
-        })
-    }
+    await mongoose.connect(mongodb).then(() => {
+        if (port) {
+            app.listen(port, () => {
+                console.log(`connected to DB & listening on port ${port}`);
+            })
+        }
+    })
 }
