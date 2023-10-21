@@ -1,7 +1,14 @@
 import "./App.css";
+import FirstPage from "./components/FirstPage";
+import SecondPage from "./components/SecondPage";
 
 function App() {
-  return <>Hello world</>;
+  return (
+    <div>
+      <FirstPage />
+      <SecondPage />
+    </div>
+  );
 }
 
 export default App;
