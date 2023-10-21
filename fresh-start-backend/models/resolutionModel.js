@@ -6,7 +6,8 @@ const Schema = mongoose.Schema;
 const resolutionSchema = new Schema(
     {
         content: { type: String, required: true}
-    }
+    },
+    { timestamps: true }
 );
 
 module.exports = mongoose.model("Resolution", resolutionSchema);

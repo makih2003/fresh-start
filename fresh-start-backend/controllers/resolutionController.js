@@ -3,7 +3,9 @@ const asyncHandler = require("express-async-handler");
 
 // GET all resolutions
 const get_resolutions = asyncHandler(async (req, res, next) => {
-    const resolutions = await Resolution.find({}).exec();
+    const resolutions = await Resolution.find({})
+        .sort({ createdAt: -1 })
+        .exec();
 
     res.status(200).json(resolutions);
 });
