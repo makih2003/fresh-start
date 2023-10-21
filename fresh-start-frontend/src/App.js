@@ -57,7 +57,7 @@ function App() {
       setNewRes={setContent}
     />
   ) : (
-    <SecondPage data={resolutions} />
+    <SecondPage data={resolutions} onSubmit={setIsSubmitted} />
   );
 }
 
