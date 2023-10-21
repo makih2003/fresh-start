@@ -29,7 +29,7 @@ function App() {
     const data = await response.json();
 
     if (response.ok) {
-      setResolutions([...resolutions, data]);
+      setResolutions([data, ...resolutions]);
       setContent("");
     }
   }
