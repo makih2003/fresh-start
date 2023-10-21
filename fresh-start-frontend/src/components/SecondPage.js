@@ -1,6 +1,6 @@
 import "./SecondPage.css";
 
-function SecondPage({ data }) {
+function SecondPage({ data, onSubmit }) {
   function getColor() {
     return (
       "hsl(" +
@@ -20,6 +20,7 @@ function SecondPage({ data }) {
           {content.content}
         </span>
       ))}
+      <button onClick={() => onSubmit(false)}>Back</button>
     </div>
   );
 }
