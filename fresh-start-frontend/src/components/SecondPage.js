@@ -33,7 +33,7 @@ function SecondPage({ data, onSubmit }) {
       );
 
       if (currentDiv.length === 10 || i === data.length - 1) {
-        if (counter === 4) {
+        if (counter === 10) {
           counter = 1;
         } else {
           counter++;
@@ -50,6 +50,24 @@ function SecondPage({ data, onSubmit }) {
             break;
           case 4:
             lineDirection = "four";
+            break;
+          case 5:
+            lineDirection = "five";
+            break;
+          case 6:
+            lineDirection = "six";
+            break;
+          case 7:
+            lineDirection = "seven";
+            break;
+          case 8:
+            lineDirection = "eight";
+            break;
+          case 9:
+            lineDirection = "nine";
+            break;
+          case 10:
+            lineDirection = "ten";
             break;
           default:
             break;
@@ -73,10 +91,11 @@ function SecondPage({ data, onSubmit }) {
 
   return (
     <div className="container">
+      
       <div className="data-container">{createDivs(data)}</div>
       <button className="back-button" onClick={() => onSubmit(false)}>
         Back
-      </button>
+      </button><p className="data-title">Here's what other people are looking to achieve soon!</p>
     </div>
   );
 }
