@@ -1,16 +1,15 @@
 import "./FirstPage.css";
 
 function FirstPage({ onHandleSubmit, newRes, setNewRes, isOffensive }) {
-  const nextYear = new Date().getFullYear() + 1;
 
   return (
     <div className="content">
-      <h1>New Year, New Me! </h1>
-      <h2>What would you like to do more in {nextYear} ?</h2>
+      <h1>Time for a Fresh Start! </h1>
+      <h2>What dream are you pursuing today ?</h2>
       <form className="user-form" onSubmit={onHandleSubmit}>
         <input
           type="text"
-          placeholder="Your new year resolution..."
+          placeholder="Learn how to cook, Pick up a new language, ..."
           value={newRes}
           onChange={(e) => {
             setNewRes(e.target.value);
@@ -24,6 +23,7 @@ function FirstPage({ onHandleSubmit, newRes, setNewRes, isOffensive }) {
       ) : (
         <></>
       )}
+      <p className="disclaimer">Share your dreams, inspire others. <br />All data is anonymous and secure.</p>
     </div>
   );
 }
