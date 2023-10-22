@@ -16,7 +16,7 @@ function FirstPage({ onHandleSubmit, newRes, setNewRes, isOffensive }) {
             setNewRes(e.target.value);
           }}
         ></input>
-        <button>Submit</button>
+        <button className="submit-button">Submit</button>
       </form>
 
       {isOffensive ? (
