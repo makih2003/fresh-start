@@ -4,6 +4,12 @@ By Maki Hosokawa and Miguel Fierro :)
 
 This is a MERN app for users to anonymously share their goals and dreams. You can share however many resolutions you want and find inspiration in other's ideas. Every entry is saved into a database that's accessed with ExpressJS via a React application running with Node.
 
+## File structure
+**fresh-start**
+- fresh-start-frontend
+- fresh-start-backend
+- README.md
+
 ## To run the application
 
 1. Clone the repository from: https://github.com/makih2003/fresh-start.git
