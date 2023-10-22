@@ -34,7 +34,7 @@ input {
   padding: 10px;
 }
 
-button {
+.submit-button {
   background-color: #e84b7f;
   color: #fff;
   border: none;
