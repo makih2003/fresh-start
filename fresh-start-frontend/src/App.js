@@ -42,6 +42,7 @@ function App() {
     }
 
     setIsSubmitted(true);
+    setIsOffensive(false);
   }
 
   useEffect(() => {
@@ -65,6 +66,7 @@ function App() {
       onHandleSubmit={handleSubmit}
       newRes={content}
       setNewRes={setContent}
+      isOffensive={isOffensive}
     />
   ) : (
     <SecondPage data={resolutions} onSubmit={setIsSubmitted} />
