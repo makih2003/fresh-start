@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import "./SecondPage.css";
 
 function SecondPage({ data, onSubmit }) {
@@ -17,9 +16,12 @@ function SecondPage({ data, onSubmit }) {
     const createDivs = (data) => {
         const divs = [];
         let currentDiv = [];
+        let counter = 0;
+        let lineDirection = "one";
 
         for (let i = 0; i < data.length; i++) {
             const content = data[i];
+
             currentDiv.push(
                 <span
                     key={`span-${i}`}
@@ -29,16 +31,40 @@ function SecondPage({ data, onSubmit }) {
                     {content.content}
                 </span>
             );
+            
 
             if (currentDiv.length === 10 || i === data.length - 1) {
+              if(counter === 4){
+                counter = 1;
+              } else {
+                counter++;
+              }
+                switch(counter){
+                  case 1:
+                    lineDirection = "one";
+                    break;
+                  case 2:
+                    lineDirection = "two";
+                    break;
+                  case 3:
+                    lineDirection = "three";
+                    break;
+                  case 4:
+                    lineDirection = "four";
+                    break;
+                  default:
+                    break;
+                }
+              
                 // If we've added 10 elements or reached the end of the data, create a new div
                 divs.push(
-                    <div key={`div-${divs.length}`} className="resolutions">
+                    <div key={`div-${divs.length}`} className={`resolutions ${lineDirection}`}>
                         {currentDiv}
                     </div>
                 );
                 currentDiv = []; // Reset the current div
             }
+            
         }
 
         return divs;
