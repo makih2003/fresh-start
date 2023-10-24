@@ -4,6 +4,8 @@ By Maki Hosokawa and Miguel Fierro :)
 
 This is a MERN app for users to anonymously share their goals and dreams. You can share however many resolutions you want and find inspiration in other's ideas. Every entry is saved into a database that's accessed with ExpressJS via a React application running with Node.
 
+### Watch the demo video: https://www.youtube.com/watch?v=FPg0GNmA67E
+
 ## File structure
 
    <blockquote>
