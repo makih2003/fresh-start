@@ -38,10 +38,4 @@ This is a MERN app for users to anonymously share their goals and dreams. You ca
 1. Enter a new goal, dream, resolution, etc. into the input box. (If it's not PG-13 it will not be accepted)
 2. See what other users are wishing to change soon, maybe you can pick one of those too?
 
-## Video Demo
-
-
-
-
-
 We hope you enjoy our application!
